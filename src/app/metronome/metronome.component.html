@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <label>Frequency</label>
+    <input #frequencyInput
+      (keyup.enter)="setFrequency(frequencyInput.value)"
+      (blur)="setFrequency(frequencyInput.value)"
+      [value]="frequency"
+      placeholder="frequency">
+  </div>
+
+  <div>
+    <label>Tempo in bpm</label>
+    <input #tempoInput
+      (keyup.enter)="setTempo(tempoInput.value)"
+      (blur)="setTempo(tempoInput.value)"
+      [value]="tempo"
+      placeholder="tempo in ms">
+  </div>
+
+  <button (click)="play()">
+    <span>{{ isPlaying ? 'Stop' : 'Start' }}</span>
+  </button>
+</div>

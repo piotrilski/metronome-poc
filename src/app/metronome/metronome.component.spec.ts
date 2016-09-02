@@ -5,7 +5,7 @@ import {
   it,
   inject
 } from '@angular/core/testing';
-import { MetronomeAppComponent } from '../app/metronome.component';
+import { MetronomeAppComponent } from '../../app/metronome/metronome.component';
 
 beforeEachProviders(() => [MetronomeAppComponent]);
 
@@ -15,8 +15,4 @@ describe('App: Metronome', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should have as title \'metronome works!\'',
-      inject([MetronomeAppComponent], (app: MetronomeAppComponent) => {
-    expect(app.title).toEqual('metronome works!');
-  }));
 });
